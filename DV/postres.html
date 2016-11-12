@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dulce Venecia | Postres</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="all" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css" media="all" /><![endif]-->
+
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="http://notoyontoy.site40.net/Js/jquery.infinitecarousel3.min.js"></script>
+  <script type="text/javascript" src="http://notoyontoy.site40.net/Js/easing.js"></script>
+  <script>
+     var a = jQuery.noConflict();
+        a(document).ready(function() {
+        a('#carousel').infiniteCarousel({
+           transitionSpeed:3000,     /*Tiempo de avance de las imagenes*/
+           displayTime: 2000,   /* El tiempo en milisegundos para hacer pausa*/
+           thumbnailType: 'false',
+           customClass: 'myCarousel',
+           easeLeft: 'linear',
+           easeRight:'linear',
+           inView: 1,    /*Imagenes mostradas*/
+           advance: true,
+           autoPilot: true,
+           displayProgressRing: true,    /*muestra grafica del tiempo que pausa la imagen*/
+});
+ });
+</script>
+
+</head>
+<body>
+<div id="header">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="selected"><a href="postres.html">Nuestros Postres</a></li>
+    <li><a href="entregas.html">Entrega</a></li>
+    <li><a href="pagos.html">Pago</a></li>
+    <li><a href="acerca.html">Nosotros</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contactanos</a></li>
+    <li><a href="logout.php"> Salir </a></li>
+  </ul>
+  <div class="logo"><a href="index.html"><img src="imges_DV/NewLogo.png" alt="" /></a></div>
+</div>
+<div id="body">
+  <div class="gallery">
+    <h1>Una Muestra de Nuestros Postres</h1>
+    <div>
+      <div> 
+      <ul id="carousel">
+        <li><img  width="400" height="300" class="grande" alt="" src="imges_DV/chesse/24.jpg" /></li>
+        <li><img width="400" height="300" class="grande" alt="" src="imges_DV/cup/41.jpg" /></li>
+        <li><img  width="400" height="300" class="grande" alt="" src="imges_DV/eventos/21.jpg" /></li>
+        <li><img  width="400" height="300" class="grande" alt="" src="imges_DV/chesse/01.jpg" /></li>
+      </ul>
+      </div>
+      <ul>
+        <li><a  href="imges_DV/chesse/24.jpg"><img class="mediana" src="imges_DV/chesse/24.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/chesse/22.jpg"><img class="mediana" src="imges_DV/chesse/22.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/chesse/25.jpg"><img class="mediana" src="imges_DV/chesse/25.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/cup/41.jpg"><img class="mediana" src="imges_DV/cup/41.jpg" alt="" /> </li>
+          <li><a href="imges_DV/cup/42.jpg"><img class="mediana" src="imges_DV/cup/42.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/cup/43.jpg"><img class="mediana" src="imges_DV/cup/43.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/eventos/21.jpg"><img class="mediana" src="imges_DV/eventos/21.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/eventos/22.jpg"><img class="mediana" src="imges_DV/eventos/22.jpg" alt="" /> </a></li>
+          <li><a href="imges_DV/eventos/23.jpg"><img class="mediana" src="imges_DV/eventos/23.jpg" alt="" /> </a></li>
+      </ul>
+    </div>
+    <h3>Para dejar el mejor sabor de boca al terminar una comida o cena especial, tenemos diferentes postres.</h3>
+    <p>En nuestro catalogo podras encontrar postres navideños, flanes, panqués de chocolate, zanahoria, pasteles de queso, postres de hojaldre, manzanas cubiertas, cupcakes personalizados, gelatinas. etc.</p>
+  </div>
+</div>
+<div id="footer">
+  <div>
+    <div class="connect">
+      <h4>Follow us:</h4>
+      <ul>
+        <li class="facebook"><a href="https://www.facebook.com/DulceVeneciaSLP">facebook</a></li>
+        <li class="twitter"><a href="https://www.twitter.com/">twitter</a></li>
+      </ul>
+    </div>
+    <p>Copyright &copy; <a href="#">www.dulcevenceciaslp.com.mx</a> - All Rights Reserved | Adrian Sanchez </p>
+  </div>
+</div>
+</body>
+</html>
