@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Comentarios tipo facebook con jQuery</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery.validate.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#postComment').validate({
+                    submitHandler: function(form) {
+                         
+                         $.ajax({
+                              type: "POST",
+                              contentType: "application/json; charset=utf-8",
+                              url: $(form).attr('action'),
+                              data: $(form).serialize(),
+                              success: function (result) {
+ 
+                                   var comment = $('<div></div>').addClass('comment');
+                                   var avatar = $('<div></div>').addClass('avatar');
+                                   var img = $('<img/>').attr({'src':'img/1.png'});
+                                   var text = $('<div></div>').addClass('autoComment').html('<span>'+$('#username').val()+' </span>'+$('#newComment').val());
+ 
+                                   avatar.append(img);
+                                   comment.append(avatar);
+                                   comment.append(text);
+ 
+                                   $('#comments').append(comment);
+                                   $('#newComment').val('');
+                              }
+                         });
+                    },
+                    errorPlacement: function(error,element) {
+                      return;
+                    },
+                });
+            });
+        </script>
+        <style type="text/css">
+            body
+            {
+                font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+                font-size: 11px;
+            }
+            #container
+            {
+                width: 290px;
+                margin: 0 auto;
+                height: auto;
+                overflow: auto !important;
+            }
+            #commentBox
+            {
+                background: #edeff4;
+                height: 25px;
+                overflow: hidden;
+                display: block;
+                padding: 10px;
+            }
+            #postComment input
+            {
+                width: 100%;
+            }
+            #postComment .enviar
+            {
+                clear: both;
+                float: left;
+            }
+ 
+            #comments
+            {
+                margin-top: 15px;
+                float: left;
+                width: 100%;
+                background: #edeff4;
+                overflow: auto;
+            }
+            #comments .comment
+            {
+                padding: 10px;
+                border-bottom: 1px solid #fff;
+                overflow: auto;
+            }
+            #comments .comment .avatar
+            {
+                float: left;
+                margin-right: 10px;
+            }
+            #comments .comment .avatar img
+            {
+                width: 32px;
+                height: 32px;
+            }
+            #comments .comment .autoComment
+            {
+                float: right;
+                width: 225px;
+            }
+            #comments .comment .autoComment span
+            {
+                font-weight: bold;
+                color: #3b5998;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="comments">
+                <div class="comment">
+                    <div class="avatar">
+                        <img src="img/1.png" />
+                    </div>
+                    <div class="autoComment">
+                        <span>Alevsk </span>
+                        Comentario de ejemplo           
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="avatar">
+                        <img src="img/2.png" />
+                    </div>
+ 
+                    <div class="autoComment">
+                        <span>Chell </span>
+                        Comentario de ejemplo           
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="avatar">
+                        <img src="img/3.png" />
+                    </div>
+ 
+                    <div class="autoComment">
+                        <span>Calorine </span>
+                        Comentario de ejemplo           
+                    </div>
+                </div>
+            </div>
+            <div id="commentBox">
+                <form action="post.php" id="postComment" method="post" accept-charset="utf-8">
+                    <input type="text" name="newComment" required="" autocomplete="off" placeholder="¿En que estas pensando?" id="newComment"></input>
+                    <input type="hidden" name="username" id="username" value="Alevsk"></input>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

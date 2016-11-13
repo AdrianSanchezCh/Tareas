@@ -1,0 +1,144 @@
+@import "font/font.css"; /*Fuente personalizada */
+
+
+.buscarp,  body{ 
+    color: #E954B0; /*Gris Clarito :3 */
+   font-family: 'lillyregular'; /*Accedemos a la fuente personalizada*/
+}
+
+/*Accedemos a toda la clase login*/
+.login, .menuadmin{
+        width: 300px; /* Damos el Ancho de la clase login*/      
+}
+
+/*Accedemos al fieldset dentro de la clase login*/
+.login fieldset{
+    border: 2px solid silver;
+    background-color:  : #F3F3F3
+     /*Hacemos que los bordes sean mas delgados para el fieldset*/
+}
+body .form{
+background-color:  : #F5A1EC;
+
+}
+
+/*Accedemos a todos los input dentro de la clase login*/
+
+.login input, 
+.menuadmin input {
+        font-family: 'lillyregular';/*Todos los imput tendran una fuente personalizada
+        */
+}
+
+/*Accedemos a los input que tengan el tipo text y tipo password*/
+
+.login input[type = text],
+.login input[type = password]{
+    text-align: center;/*Centra el texto*/
+    padding: .5em .6em ;/* Modificamos o alteramos el Tamaño  de la caja de texto*/
+    border: 1px solid #ccc; /*borde de un pixel sera  solido y gris más clarito aun :3 */
+    box-shadow: inset 0 1px 3px #ddd;/*Sombra casi no se nota pero puedes verla bien con el codigo de color #000*/
+    border-radius: 4px;  /*Con esto los bordes seran un poco redondeados y no cuadrados <.< */
+}
+
+/*Accedemos a los input que tengan el tipo submit y tipo reset*/
+
+.login input[type = submit],
+.login input[type = reset],
+.login input[type = button],
+.menuadmin input[type = button],
+.registro input[type = button], 
+.buscarp button[type = submit]
+{
+        background-color: #E954B0; /*Color del boton sera azulito claro :3*/
+        color : #fff; /*Color de letra Blanca :v */
+        padding : .5em 1em ; /*Ajustamos un poco el tamaño */
+        border: 0; /*Quitamos los bordes :v */
+        border-radius: 4px; /*Redondeamos los botones un poco ^_^*/
+        cursor: pointer ; /*Cuando el mouse se ponga ensima del boton se convertira en una manito D: */
+}
+
+/*Accedemos a los input que tengan el tipo submit y tipo reset pero con el efecto Hover le decimos que cuando el mouse este
+encima del boton submit y reset*/
+
+.login input[type = submit]:hover,
+.login input[type = reset]:hover,
+.menuadmin input[type = button]:hover,
+.registro input[type = button]:hover,
+.buscarp button[type = submit]:hover{
+    
+   background-image : linear-gradient(transparent, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.1));/*Cuando el mouse se ponga encima
+   cambiara de color :3 mas conocido como efecto Hover */
+}
+
+
+/*Accedemos a la etiqueta a de html*/
+a{
+    color:  #E954B0; /*Ponemos el color de la letra sera la misma que el fondo de los botones azulito claro ^_^*/
+    text-decoration: none; /*Esto lo acemos para quitar esa raya molesta de nuestro texto <.<*/   
+}
+
+
+/*-----start-responsive-design------*/
+@media (max-width:1024px){
+.login-form  {
+        margin:8% auto 0;
+        width:45%;
+    }
+    .copy-right {
+    left: 41%;
+    bottom:-18%;
+    }
+}
+@media (max-width:768px){
+    .login-form  {
+        margin:12% auto 0;
+        width:57%;
+    }
+    .copy-right {
+    left:38%;
+    bottom:-14%;
+    }
+}
+@media (max-width:640px){                                  
+    .login-form  {
+        margin:13% auto 0;
+        width:70%;
+    }
+    .copy-right {
+    left:36%;
+    bottom:-18%;
+    }
+}
+@media (max-width:480px){                                  
+    .login-form  {
+        margin:20% auto 0;
+        width:90%;
+    }
+    .copy-right {
+    left:30%;
+    bottom:-17%;
+    }
+    
+}
+
+
+.login input[type = text]:hover,
+.login input[type = password]:hover,
+.login select:hover{
+    border:1px solid #40A9DF;
+     box-shadow: 0 0 1em #40A9DF;
+     -webkit-box-shadow: 0 0 1em #40A9DF;
+     -o-box-shadow: 0 0 1em #40A9DF;
+     -moz-box-shadow: 0 0 1em #40A9DF;}
+
+body .subindice{ 
+    color: #642D2D; /*Gris Clarito :3 */
+   font-family: 'Arial'; /*Accedemos a la fuente personalizada*/
+}
+
+
+body .tabla{ 
+    color: #642D2D; /*Gris Clarito :3 */
+   font-family: 'Arial'; /*Accedemos a la fuente personalizada*/
+}

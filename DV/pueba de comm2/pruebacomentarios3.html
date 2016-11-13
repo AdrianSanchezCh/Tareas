@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function get(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+}	
+</script>
+</head>
+<body>
+<p id="ln"></p>
+<p id="fn"></p>
+
+<form action="" onsubmit="return doSomething();"  method="get">
+  <label for="name">Nombre:</label><br />
+  <input type="text" name="firstname" value="" placeholder="Nombre" >
+  <br>
+  <label for="email">Email:</label><br />
+
+  <input type="email" name="correu" value="" placeholder="Email">
+  <br><br>
+  
+<textarea id="message" class="input" required="true" name="message" rows="5" cols="50"   placeholder="Dejanos tus comentarios"></textarea><br />
+
+
+
+  <input type="submit" value="Guardar" >
+  	
+      <a type="button" href="" onclick="document.forms[0].submit();return false;">Reset</a> 
+
+
+</form>
+
+<script type="text/javascript">
+function doSomething() {
+	var correu = get('correu')
+	var firstname = get('firstname')
+  var comments= get('message')
+	//document.write(lastname);
+	document.getElementById("fn").innerHTML += "<p> Nombre :" + firstname + "<br/> <p> Email :" + correu +" </p><br/>  <p> comentarios :" + comments +" </p><br/>";
+	correu = "";
+	firstname = "";
+
+ return false;
+}
+</script>
+</body>
+</html>
